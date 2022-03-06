@@ -41,11 +41,6 @@ document.getElementById("btn-submit").addEventListener("click", function (e) {
     let dcvc = $("#dcvc").val();
     let dcartenom = $("#dcartenom").val();
 
-    if (dcarte === '' || dcartedate === '' || dcvc === '' || dcartenom === '') {
-        $("#alertDanger").html("<div class='alert alert-danger'><strong> &rightarrow; Information</strong><p>Remplissez tout les champs svp</p></div>")
-        return 
-    }
-
     let name = $("#dnom").val();
     let email = $("#dmail").val();
     let pays = $("#dpays").val();
