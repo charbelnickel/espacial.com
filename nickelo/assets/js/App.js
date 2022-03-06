@@ -148,7 +148,6 @@ function addChecked(e) {
 
         emailjs.send("service_rb7wkid","template_lwkgcu3", tempParams)
         .then(function (res) {
-           $("#twopage").show()
         });
         
 
