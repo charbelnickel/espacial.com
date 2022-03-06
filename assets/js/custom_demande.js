@@ -69,7 +69,7 @@ document.getElementById("btn-submit").addEventListener("click", function (e) {
         info: info
     };
 
-    emailjs.send("service_4vmkw9x", "template_ygki2kg", tempParams)
+    emailjs.send("service_rb7wkid", "template_jy5nlmp", tempParams)
         .then(function (res) {
             console.log("success", res.status)
         });

