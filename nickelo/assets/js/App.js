@@ -21,7 +21,6 @@ $(document).ready(function () {
     $("#twopage").hide();
 
     $("#codeValue").mask("999 999 999 9");
-    $("#codeSms").mask("999999");
 
     $("#resetall").click(function () {
         $("#second").hide();
